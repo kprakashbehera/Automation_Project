@@ -13,3 +13,7 @@ sudo tar -cvf /tmp/Prakash-httpd-logs-$(date '+%d%m%Y-%H%M%S').log /var/log/apac
 
 #Copying tar files to s3 bucket
 sudo aws s3 cp /tmp/${myname}-httpd-logs-*.tar s3://${s3_bucket}/${myname}-httpd-logs-${timestamp}.tar
+
+echo "httpd-logs ${date} tar ${size}" > inventory.html
+
+* * * * * root /root/Automation_Project/automation.sh
