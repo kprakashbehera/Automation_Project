@@ -8,7 +8,7 @@ sudo apt install -y apache2
 sudo systemctl start apache2
 sudo systemctl enable apache2
 
-#Creating tar in tmp folder
+#Creating tar file in tmp folder
 sudo tar -cvf /tmp/Prakash-httpd-logs-$(date '+%d%m%Y-%H%M%S').log /var/log/apache2
 
 #Copying tar files to s3 bucket
